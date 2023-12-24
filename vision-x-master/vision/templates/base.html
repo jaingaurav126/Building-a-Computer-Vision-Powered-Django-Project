@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="static/favicon.png">
+
+    <!-- Primary Meta Tags -->
+
+    <meta name="title" content="vision-x">
+    <meta name="description" content="vision - X is a computer Vision application 
+developed by Tirtharaj Sinha.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tirtharajsinha.pythonanywhere.com/">
+    <meta property="og:title" content="vision-x">
+    <meta property="og:description" content="vision - X is a computer Vision application 
+developed by Tirtharaj Sinha.">
+    <meta property="og:image" content="https://tirtharajsinha.pythonanywhere.com/static/snap.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tirtharajsinha.pythonanywhere.com/">
+    <meta property="twitter:title" content="vision-x">
+    <meta property="twitter:description" content="vision - X is a computer Vision application 
+developed by Tirtharaj Sinha.">
+    <meta property="twitter:image" content="https://tirtharajsinha.pythonanywhere.com/static/snap.png">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/base.css" />
+    <link rel="stylesheet" href="{% block css %}{% endblock css %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>{% block title %}{% endblock title %} | Vision</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <a href="/dashboard">
+                <li class="fa fa-home dashboard"><span>Dashboard</span></li>
+            </a>
+            <a href="/service">
+                <li class="fa fa-briefcase service"><span>Service</span></li>
+            </a>
+            <a href="/showimg">
+                <li class="fa fa-history history"><span>History</span></li>
+            </a>
+
+            <a href="/about">
+                <li class="fa fa-info-circle about"><span>About</span></li>
+            </a>
+            <a href="/profile">
+                <li class="fa fa-user profile"><span>Profile</span></li>
+            </a>
+            <a href="/logout">
+                <li class="fa fa-sign-out logout"><span>LogOut</span></li>
+            </a>
+            <a href="https://tirtharajsinha.github.io">
+                <li class="fa fa-mobile-phone contact"><span>Contact</span></li>
+            </a>
+            <a href="/deluser">
+                <li class="fa fa-close deluser" style="color: red; display: none"><span>Delete Account</span>
+                </li>
+            </a>
+            <li></li>
+
+        </ul>
+    </div>
+    <div class="container-box">{% block content %}{% endblock %}</div>
+</body>
+
+</html>
